@@ -1,0 +1,85 @@
+[
+  {
+    "cava": {
+      "bar_delimiter": 0,
+      "bars": 6,
+      "format-icons": [
+        "▁",
+        "▂",
+        "▃",
+        "▄",
+        "▅",
+        "▆",
+        "▇",
+        "█"
+      ]
+    },
+    "clock#date": {
+      "format": "{:%a %B %d}",
+      "rotate": 270,
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "clock#time": {
+      "format": "{:%I:%M}"
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+        "1": "1",
+        "10": "0",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9"
+      },
+      "on-click": "activate",
+      "persistent-workspaces": {
+        "*": 5
+      }
+    },
+    "layer": "top",
+    "margin-bottom": 8,
+    "margin-left": 8,
+    "margin-top": 8,
+    "modules-center": [
+      "clock#date",
+      "clock#time"
+    ],
+    "modules-left": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "pulseaudio/slider",
+      "pulseaudio#percentage",
+      "cava"
+    ],
+    "position": "left",
+    "pulseaudio": {
+      "format": "{icon}",
+      "format-bluetooth": "{icon}",
+      "format-icons": {
+        "default": [
+          ""
+        ],
+        "headphones": ""
+      },
+      "format-muted": "",
+      "on-click": "pavucontrol",
+      "scroll-step": 1
+    },
+    "pulseaudio#percentage": {
+      "format": "{volume}%",
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "pulseaudio/slider": {
+      "max": 100,
+      "min": 0,
+      "orientation": "vertical"
+    },
+    "reload_style_on_change": true
+  }
+]

@@ -1,0 +1,153 @@
+@define-color mainbg #2E3440;
+@define-color modulesbg #434C5E;
+@define-color text #D8DEE9;
+@define-color alttext1 #81A1C1;
+@define-color alttext2 #5E81AC;
+@define-color border #5E81AC;
+@define-color empty #2E3440;
+@define-color persistent #4C566A;
+@define-color hover #D08770;
+@define-color white #E5E9F0;
+@define-color red #BF616A;
+@define-color orange #D08770;
+@define-color yellow #EBCB8B;
+@define-color green #A3BE8C;
+@define-color pink #B48EAD;
+
+* {
+  all: initial;
+  font-family:'JetBrainsMono Nerd Font';
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+window#waybar {
+	background: @mainbg;
+	border: 1px solid @border;
+	border-radius: 5px;
+}
+
+tooltip {
+  background: #4C566A;
+  border: 2px solid #88C0D0;
+  border-radius: 5px;
+  font-size: 12pt;
+}
+
+tooltip label {
+  padding: 10px;
+}
+
+#workspaces {
+  margin: 10px 0px;
+  background: @modulesbg;
+  font-size: 12pt;
+  padding: 20px 0px;
+  border-top:3px solid @border;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 5px;
+  border-bottom: 3px solid @border;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 5px;
+}
+
+#workspaces button {
+  font-size: 18pt;
+  padding: 2px;
+  margin: 5px 6px;
+  border-radius: 10px;
+}
+
+#workspaces button.persistent {
+  background-color: @persistent;
+}
+
+#workspaces button.empty {
+  background-color: @empty;
+}
+
+#workspaces button.visible {
+  background-color: @empty;
+}
+
+#workspaces button.active {
+  background-color: @green;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+}
+
+#workspaces button:hover {
+  background-color: @hover;
+}
+
+#pulseaudio, #clock, #clock.date, #clock.time {
+  background: @modulesbg;
+}
+
+#pulseaudio {
+  padding: 1px 5px 1px 5px;
+  color: @text;
+  font-size: 16px;
+}
+
+#clock.date {
+  padding: 30px 5px 10px 5px;
+  font-size: 14px;
+  color: @alttext2;
+  border-top:3px solid @border;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 5px;
+}
+
+#clock.time {
+  padding: 10px 5px 30px 5px;
+  font-size: 14px;
+  color: @alttext1;
+  border-bottom: 3px solid @border;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 50px;
+}
+
+#pulseaudio-slider, #pulseaudio.percentage {
+  background-color: @modulesbg;
+}
+
+#pulseaudio-slider {
+  padding: 15px 0px 5px 0px;
+  border-top: 3px solid @border;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 5px;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 1px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 70px;
+    min-width: 0px;
+    border-radius: 5px;
+    background-color: @border;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @white;
+}
+
+#pulseaudio.percentage {
+  font-size: 12px;
+  margin: 0px 0px;
+  padding: 2px 5px;
+  color: @text;
+}
+
+#cava {
+  font-size: 8pt;
+  color: @pink;
+}
